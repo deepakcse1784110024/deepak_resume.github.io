@@ -8,7 +8,7 @@
 }
 
 .container {
-    width: 67%;
+    width: 69%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -23,6 +23,7 @@
     background: #def1f8;
     margin: 1px;
     padding: 8px;
+    overflow-wrap: break-word;
 }
 
 .container .right {
