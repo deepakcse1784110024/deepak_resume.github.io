@@ -1,4 +1,4 @@
-* {
+/*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,18 +7,33 @@
     line-height: 1.3;
 }
 
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
 .container {
-    width: 69%;
+    
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+     width: 69%; 
     height: auto;
     display: flex;
     justify-content: center;
-    /* border: 2px solid black; */
+    border: 2px solid black; 
     margin: 50px 50px 50px 200px;
     outline: 5px solid rgb(199, 199, 235);
     box-shadow: 5px 10px 8px 10px #dbd7d7;
 }
 
 .container .left {
+    position: relative;
     width: 30%;
     background: #def1f8;
     margin: 1px;
@@ -27,6 +42,7 @@
 }
 
 .container .right {
+    position: relative;
     width: 70%;
     background: white;
     margin: 5px;
@@ -61,4 +77,124 @@ span {
 
 .education h5 {
     color: darkblue;
+}
+
+@media(max-width:690px) {
+    .container {
+         display: flex;
+        flex-direction: row;
+    }
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.3;
+}
+
+body {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.resume_wrapper {
+    display: flex;
+    width: 800px;
+    margin: 50px auto;
+    background: #fff;
+    outline: 5px solid rgb(199, 199, 235);
+    box-shadow: 5px 10px 8px 10px #dbd7d7;
+}
+
+.resume_wrapper .resume_left {
+    width: 35%;
+    background: #def1f8;
+    margin: 1px;
+    padding: 8px;
+}
+
+.resume_wrapper .resume_right {
+    margin-left: 10px;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    background-color: darkblue;
+    margin: 5px;
+    padding: 3px;
+}
+
+.resume_wrapper .resume_left .name {
+    display: none;
+}
+
+.name {
+    color: darkblue;
+    text-align: center;
+}
+
+.name h3 {
+    color: gray;
+}
+
+.right .project p {
+    color: darkblue;
+}
+
+span {
+    font-weight: bold;
+    font-size: medium;
+}
+
+.education h5 {
+    color: darkblue;
+}
+
+.education ul li {
+    padding: 2px;
+    margin-left: 2px;
+}
+
+.project ul li {
+    padding: 2px;
+    margin-left: 2px;
+}
+
+.project ul li {
+    padding: 2px;
+    margin-left: 2px;
+}
+
+.achievement ul li {
+    padding: 1px;
+    margin-left: 2px;
+}
+
+@media screen and (max-width: 800px) {
+    .resume_wrapper .resume_right .name {
+        display: none;
+    }
+    .resume_wrapper .resume_left .name {
+        display: block;
+    }
+    .resume_wrapper {
+        width: 95%;
+        margin: 10px auto;
+        flex-direction: column;
+    }
+    .resume_wrapper .resume_left,
+    .resume_wrapper .resume_right {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .resume_wrapper .resume_right {
+        padding: 20px 30px;
+    }
 }
