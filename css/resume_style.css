@@ -269,6 +269,6 @@ span {
 
 @media screen and (max-width: 424px) {
     .resume_wrapper .resume_right {
-        padding: 20px 30px;
+        display: block;
     }
 }
